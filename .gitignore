@@ -1,3 +1,28 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependency directories
+/node_modules
+/jspm_packages/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+/build
+
+# misc
+.DS_Store
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Logs
 logs
 *.log
@@ -29,13 +54,6 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
 # TypeScript v1 declaration files
 typings/
 
@@ -59,3 +77,7 @@ typings/
 
 # next.js build output
 .next
+
+################################################################################
+# editor
+.idea/
