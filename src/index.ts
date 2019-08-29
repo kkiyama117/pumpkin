@@ -1,7 +1,7 @@
 import {app, BrowserWindow} from 'electron';
 
 // import path from 'path';
-import url from 'url';
+import * as url from 'url';
 
 let win: BrowserWindow | null;
 

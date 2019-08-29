@@ -6,14 +6,14 @@
   "license": "GPLv3",
   "private": true,
   "homepage": ".",
-  "main": "build/index.ts",
+  "main": "dist/index.ts",
   "dependencies": {
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "electron": "latest"
   },
   "scripts": {
-    "webpack": "./node_modules/.bin/webpack --display-error-details",
+    "build": "./node_modules/.bin/webpack --display-error-details",
     "electron": "/usr/bin/electron ."
   },
   "eslintConfig": {},
