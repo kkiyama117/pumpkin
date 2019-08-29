@@ -5,7 +5,7 @@ const main = {
     target: 'electron-main',
     entry: path.join(__dirname, 'src', 'index'),
     output: {
-        filename: 'index.js',
+        filename: 'index.ts',
         path: path.resolve(__dirname, 'dist')
     },
     node: {
@@ -34,8 +34,8 @@ const renderer = {
     target: 'electron-renderer',
     entry: path.join(__dirname, 'src', 'renderer', 'index'),
     output: {
-        filename: 'index.js',
-        path: path.resolve(__dirname, 'dist', 'scripts')
+        filename: 'index.ts',
+        path: path.resolve(__dirname, 'dist', 'renderer')
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx', '.css', '.ts', '.tsx']

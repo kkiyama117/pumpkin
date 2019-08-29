@@ -1,20 +1,19 @@
 import {app, BrowserWindow} from 'electron';
 
-import path from 'path';
+// import path from 'path';
 import url from 'url';
 
-let win = null;
+let win: BrowserWindow | null;
 
 function createWindow() {
     win = new BrowserWindow({width: 800, height: 600});
     win.loadURL(url.format({
         //react-scriptでビルドされるファイルをロードする
-        pathname: path.join(__dirname, '/../public/index.html'),
         protocol: 'file:',
         slashes: true
     }));
     // デバッグツールはデフォルトOFF.
-    //win.webContents.openDevTools()
+    win.webContents.openDevTools();
     win.on('closed', () => {
         win = null
     })

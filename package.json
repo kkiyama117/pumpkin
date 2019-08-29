@@ -6,16 +6,15 @@
   "license": "GPLv3",
   "private": true,
   "homepage": ".",
-  "main": "src/index.js",
+  "main": "dist/index.ts",
   "dependencies": {
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "electron": "latest"
   },
   "scripts": {
-    "build": "./node_modules/.bin/webpack --display-error-details",
-    "electron": "electron ."
+    "webpack": "./node_modules/.bin/webpack --display-error-details",
+    "electron": "/usr/bin/electron ."
   },
   "eslintConfig": {},
   "browserslist": {
@@ -29,5 +28,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "tslint": "^5.19.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }
