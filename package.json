@@ -6,7 +6,7 @@
   "license": "GPLv3",
   "private": true,
   "homepage": ".",
-  "main": "dist/index.ts",
+  "main": "build/index.ts",
   "dependencies": {
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
