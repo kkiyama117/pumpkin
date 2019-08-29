@@ -6,7 +6,7 @@ const main = {
     entry: path.join(__dirname, 'src', 'index'),
     output: {
         filename: 'index.ts',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'build')
     },
     node: {
         __dirname: false,
@@ -35,7 +35,7 @@ const renderer = {
     entry: path.join(__dirname, 'src', 'renderer', 'index'),
     output: {
         filename: 'index.ts',
-        path: path.resolve(__dirname, 'dist', 'renderer')
+        path: path.resolve(__dirname, 'build', 'renderer')
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx', '.css', '.ts', '.tsx']
