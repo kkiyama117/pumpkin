@@ -1,12 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {app, BrowserWindow} from 'electron';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import path from 'path';
+import url from 'url';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+let win = null;
+
+function createWindow() {
+    win = new BrowserWindow({width: 800, height: 600});
+    win.loadURL(url.format({
+        //react-scriptでビルドされるファイルをロードする
+        pathname: path.join(__dirname, '/../public/index.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
+    // デバッグツールはデフォルトOFF.
+    //win.webContents.openDevTools()
+    win.on('closed', () => {
+        win = null
+    })
+}
+
+app.on('ready', createWindow);
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit()
+    }
+});
+app.on('activate', () => {
+    if (win === null) {
+        createWindow()
+    }
+});
